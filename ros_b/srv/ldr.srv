@@ -1,0 +1,7 @@
+float64 dis
+---
+float64[] maxi
+float64[] mini
+float64[] ran
+int64[] pos
+
