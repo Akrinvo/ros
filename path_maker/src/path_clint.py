@@ -113,6 +113,11 @@ def clickdata(click_d):
     
     x11=click_d.point.x
     y11=click_d.point.y
+    ori_x=click_d.quaternion.x
+    ori_y=click_d.quaternion.y
+    ori_z=click_d.quaternion.z
+    ori_w=click_d.quaternion.w
+    print(ori_x,ori_y,ori_z,ori_w)
     x_,y_=add_two_client(x11,y11)
     # path=Path()
     
@@ -138,7 +143,7 @@ if __name__=="__main__":
     if __name__=='__main__':
         rp.init_node("marker_basic",anonymous=True)
        
-        click=rp.Subscriber('/clicked_point',PointStamped,clickdata)
+        click=rp.Subscriber('/move_base_simple/goal',PointStamped,clickdata)
         pub=rp.Publisher('/r',Path,queue_size=10)
         rp.spin()
   
