@@ -1,0 +1,40 @@
+footprint: 
+  - 
+    - 0.125
+    - 0.275
+  - 
+    - 0.125
+    - -0.275
+  - 
+    - -0.515
+    - -0.275
+  - 
+    - -0.515
+    - 0.275
+
+footprint_padding: 0.02
+inflation_layer: 
+  cost_scaling_factor: 3.0
+  inflation_radius: 1.2
+obstacle_range: 3.5
+obstacle_layer: 
+  laser: 
+    clearing: true
+    data_type: LaserScan
+    inf_is_valid: true
+    marking: true
+    topic: scan
+  
+ 
+ 
+
+
+  
+transform_tolerance: 0.5
+update_frequency: 10.0
+static_layer: {enabled: true}
+
+    
+
+
+
